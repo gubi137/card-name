@@ -1,0 +1,215 @@
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 2%;
+}
+
+.business-card {
+    width: 750px;
+    height: 400px;
+    background-color: #ffffff;
+    display: flex;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Bagian Kiri */
+.info-section {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-draw{ 
+     width : 130px;
+     height : 130px;
+     flex: auto;
+     margin-top: 10px;
+     margin-bottom: 1px;
+
+
+}
+
+
+.logo-icon { font-size: 50px; }
+.logo-text { font-weight: 400; 
+    line-height: 0.8; text-align: left; }
+
+.name-container h2 {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.underline {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.job-title {
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 2px;
+
+}
+
+.details p {
+    font-size: 17px;
+    margin: 8px 0;
+    color: #333;
+    font-weight : bold;
+}
+
+.details p:hover {
+    background-color: rgb(102, 150, 204);
+    transition: .3s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 9px;
+}
+
+.country {
+    margin-top: 8px !important;
+    font-weight: bold;
+}
+
+/* Bagian Kanan (QR) */
+.qr-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-label {
+    background-color: #000;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Panah kecil di bawah label QR */
+.qr-label::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #000;
+}
+
+.qr-box {
+    position: relative;
+    padding: 20 px;
+}
+
+.qr-code-placeholder {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-code-placeholder img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Frame sudut QR */
+.corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid black;
+}
+
+.top-left { top: 0; left: 0; border-right: none; border-bottom: none; }
+.top-right { top: 0; right: 0; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 0; left: 0; border-right: none; border-top: none; }
+.bottom-right { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+
+@media screen and (max-width: 599px) {
+    .business-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-section, .qr-section {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .qr-label {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .business-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-section, .qr-section {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .qr-label {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .business-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-section, .qr-section {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .qr-label {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 599px) {
+    .qr-code-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+}
