@@ -49,12 +49,17 @@ body {
     margin-bottom: 5px;
 }
 
-.underline {
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    margin-top: 1px;
-    margin-bottom: 5px;
+.name 
+{
+    font-size: 38px;
+    font-weight: 500px;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+}
+.tagline {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 1px;
 }
 
 .job-title {
